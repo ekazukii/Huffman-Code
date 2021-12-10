@@ -1,0 +1,177 @@
+\hypertarget{arbre_8c}{}\doxysection{Référence du fichier arbre.\+c}
+\label{arbre_8c}\index{arbre.c@{arbre.c}}
+
+
+Contient les fonctions de gestion lds arbre binaires.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}arbre.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{arbre_8c_a8b0d099b80f0aa5bd8194f892227ad75}{M\+A\+L\+L\+OC}}(x)~((x$\ast$ ) malloc(sizeof(x)))
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+Ptr\+Liste \mbox{\hyperlink{arbre_8c_a7ed62c200631f89af48656bce08ac09e}{creer\+Noeud}} (P\+Arbre x, Ptr\+Liste suiv)
+\item 
+Ptr\+Liste \mbox{\hyperlink{arbre_8c_a2f61a37bb9c3870cc2f51f6310861a3a}{insert\+List}} (Ptr\+Liste tete, P\+Arbre val)
+\begin{DoxyCompactList}\small\item\em Insert un élément de manière croissante dans un liste. \end{DoxyCompactList}\item 
+P\+Arbre \mbox{\hyperlink{arbre_8c_a182f016c207afd89026bffd93e6e6348}{creer\+Arbre\+Bin}} (int e, char c)
+\begin{DoxyCompactList}\small\item\em Créer un arbre binaire contenant aucun fils. \end{DoxyCompactList}\item 
+Ptr\+Liste \mbox{\hyperlink{arbre_8c_ac6273fa0f5f29c96beb964afe918e3b6}{depile}} (Ptr\+Liste \mbox{\hyperlink{main_8c_aa74cd26724eac1e5cd5481bd461753ce}{pile}}, P\+Arbre A)
+\begin{DoxyCompactList}\small\item\em Retire le premier élément de la liste et retourne la nouvelle liste Renvoie le premier élément de la liste à travers le paramètre A. \end{DoxyCompactList}\item 
+P\+Arbre \mbox{\hyperlink{arbre_8c_a3b3d317b66d280048f9bb313fd0d120b}{creer\+Arbre\+Huffman}} (Ptr\+Liste liste)
+\begin{DoxyCompactList}\small\item\em Créer l\textquotesingle{}abre binaire de Huffman à partir d\textquotesingle{}une liste d\textquotesingle{}arbre binaire. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{arbre_8c_af9e1cacd30ceb5199963ebf2e393e2d3}{copy\+Array}} (char bit\+Array\mbox{[}256\mbox{]}, char new\+Arr\mbox{[}256\mbox{]})
+\begin{DoxyCompactList}\small\item\em Copie un tableau de 256 caractères dans un autre tableau. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{arbre_8c_a32195b98d36430b41bdff54408861c30}{create\+Dico}} (dico\+Elem \mbox{\hyperlink{main_8c_a95b5d49576d6b91034fa8d7eaaaf77e6}{dico}}\mbox{[}256\mbox{]}, P\+Arbre A, char bit\+Array\mbox{[}256\mbox{]}, int h)
+\begin{DoxyCompactList}\small\item\em Créer un tableau associant à chaque caractère son codage huffman associé \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Contient les fonctions de gestion lds arbre binaires. 
+
+
+
+\doxysubsection{Documentation des macros}
+\mbox{\Hypertarget{arbre_8c_a8b0d099b80f0aa5bd8194f892227ad75}\label{arbre_8c_a8b0d099b80f0aa5bd8194f892227ad75}} 
+\index{arbre.c@{arbre.c}!MALLOC@{MALLOC}}
+\index{MALLOC@{MALLOC}!arbre.c@{arbre.c}}
+\doxysubsubsection{\texorpdfstring{MALLOC}{MALLOC}}
+{\footnotesize\ttfamily \#define M\+A\+L\+L\+OC(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~((x$\ast$ ) malloc(sizeof(x)))}
+
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{arbre_8c_af9e1cacd30ceb5199963ebf2e393e2d3}\label{arbre_8c_af9e1cacd30ceb5199963ebf2e393e2d3}} 
+\index{arbre.c@{arbre.c}!copyArray@{copyArray}}
+\index{copyArray@{copyArray}!arbre.c@{arbre.c}}
+\doxysubsubsection{\texorpdfstring{copyArray()}{copyArray()}}
+{\footnotesize\ttfamily char$\ast$ copy\+Array (\begin{DoxyParamCaption}\item[{char}]{bit\+Array\mbox{[}256\mbox{]},  }\item[{char}]{new\+Arr\mbox{[}256\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Copie un tableau de 256 caractères dans un autre tableau. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em bit\+Array} & Tableau d\textquotesingle{}entrée de 256 char \\
+\hline
+{\em new\+Arr} & Nouveau tableau contenant 256 char \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+char$\ast$ Nouveau tableau contenant 256 char 
+\end{DoxyReturn}
+\mbox{\Hypertarget{arbre_8c_a32195b98d36430b41bdff54408861c30}\label{arbre_8c_a32195b98d36430b41bdff54408861c30}} 
+\index{arbre.c@{arbre.c}!createDico@{createDico}}
+\index{createDico@{createDico}!arbre.c@{arbre.c}}
+\doxysubsubsection{\texorpdfstring{createDico()}{createDico()}}
+{\footnotesize\ttfamily void create\+Dico (\begin{DoxyParamCaption}\item[{dico\+Elem}]{dico\mbox{[}256\mbox{]},  }\item[{P\+Arbre}]{A,  }\item[{char}]{bit\+Array\mbox{[}256\mbox{]},  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Créer un tableau associant à chaque caractère son codage huffman associé 
+
+\begin{DoxyRefDesc}{A faire}
+\item[\mbox{\hyperlink{todo__todo000001}{A faire}}]C\+H\+A\+N\+G\+ER LE N\+OM DE LA F\+CT \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Paramètres}
+{\em dico} & Le tableau \\
+\hline
+{\em A} & L\textquotesingle{}arbre de huffman \\
+\hline
+{\em bit\+Array} & \\
+\hline
+{\em h} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{arbre_8c_a182f016c207afd89026bffd93e6e6348}\label{arbre_8c_a182f016c207afd89026bffd93e6e6348}} 
+\index{arbre.c@{arbre.c}!creerArbreBin@{creerArbreBin}}
+\index{creerArbreBin@{creerArbreBin}!arbre.c@{arbre.c}}
+\doxysubsubsection{\texorpdfstring{creerArbreBin()}{creerArbreBin()}}
+{\footnotesize\ttfamily P\+Arbre creer\+Arbre\+Bin (\begin{DoxyParamCaption}\item[{int}]{e,  }\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Créer un arbre binaire contenant aucun fils. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em e} & Le nombre d\textquotesingle{}occurences du caractère \\
+\hline
+{\em c} & Le caractère à inserer dans l\textquotesingle{}abre binaire \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+P\+Arbre 
+\end{DoxyReturn}
+\mbox{\Hypertarget{arbre_8c_a3b3d317b66d280048f9bb313fd0d120b}\label{arbre_8c_a3b3d317b66d280048f9bb313fd0d120b}} 
+\index{arbre.c@{arbre.c}!creerArbreHuffman@{creerArbreHuffman}}
+\index{creerArbreHuffman@{creerArbreHuffman}!arbre.c@{arbre.c}}
+\doxysubsubsection{\texorpdfstring{creerArbreHuffman()}{creerArbreHuffman()}}
+{\footnotesize\ttfamily P\+Arbre creer\+Arbre\+Huffman (\begin{DoxyParamCaption}\item[{Ptr\+Liste}]{liste }\end{DoxyParamCaption})}
+
+
+
+Créer l\textquotesingle{}abre binaire de Huffman à partir d\textquotesingle{}une liste d\textquotesingle{}arbre binaire. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em liste} & Pointeur vers une liste chainée trié par ordre croissant \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+P\+Arbre Pointeur vers l\textquotesingle{}abre de Huffman 
+\end{DoxyReturn}
+\mbox{\Hypertarget{arbre_8c_a7ed62c200631f89af48656bce08ac09e}\label{arbre_8c_a7ed62c200631f89af48656bce08ac09e}} 
+\index{arbre.c@{arbre.c}!creerNoeud@{creerNoeud}}
+\index{creerNoeud@{creerNoeud}!arbre.c@{arbre.c}}
+\doxysubsubsection{\texorpdfstring{creerNoeud()}{creerNoeud()}}
+{\footnotesize\ttfamily Ptr\+Liste creer\+Noeud (\begin{DoxyParamCaption}\item[{P\+Arbre}]{x,  }\item[{Ptr\+Liste}]{suiv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{arbre_8c_ac6273fa0f5f29c96beb964afe918e3b6}\label{arbre_8c_ac6273fa0f5f29c96beb964afe918e3b6}} 
+\index{arbre.c@{arbre.c}!depile@{depile}}
+\index{depile@{depile}!arbre.c@{arbre.c}}
+\doxysubsubsection{\texorpdfstring{depile()}{depile()}}
+{\footnotesize\ttfamily Ptr\+Liste depile (\begin{DoxyParamCaption}\item[{Ptr\+Liste}]{pile,  }\item[{P\+Arbre}]{A }\end{DoxyParamCaption})}
+
+
+
+Retire le premier élément de la liste et retourne la nouvelle liste Renvoie le premier élément de la liste à travers le paramètre A. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em pile} & Pointeur vers la liste chainée \\
+\hline
+{\em A} & P\+O\+I\+N\+T\+E\+UR vers un arbre binaire \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Ptr\+Liste 
+\end{DoxyReturn}
+\mbox{\Hypertarget{arbre_8c_a2f61a37bb9c3870cc2f51f6310861a3a}\label{arbre_8c_a2f61a37bb9c3870cc2f51f6310861a3a}} 
+\index{arbre.c@{arbre.c}!insertList@{insertList}}
+\index{insertList@{insertList}!arbre.c@{arbre.c}}
+\doxysubsubsection{\texorpdfstring{insertList()}{insertList()}}
+{\footnotesize\ttfamily Ptr\+Liste insert\+List (\begin{DoxyParamCaption}\item[{Ptr\+Liste}]{tete,  }\item[{P\+Arbre}]{val }\end{DoxyParamCaption})}
+
+
+
+Insert un élément de manière croissante dans un liste. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em tete} & Pointeur vers une liste chainée \\
+\hline
+{\em val} & Pointeur vers l\textquotesingle{}abre à inserer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Ptr\+Liste Pointeur vers la nouvelle liste 
+\end{DoxyReturn}

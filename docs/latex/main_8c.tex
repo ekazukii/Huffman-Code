@@ -1,0 +1,270 @@
+\hypertarget{main_8c}{}\doxysection{Référence du fichier main.\+c}
+\label{main_8c}\index{main.c@{main.c}}
+
+
+Fichier contenant toutes les fonctions principales et celles liées à l\textquotesingle{}histogramme.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}bin.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}arbre.\+h\char`\"{}}\newline
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a45797645f954e737a74401f6b9268466}{creer\+Histo}} (F\+I\+LE $\ast$fp)
+\begin{DoxyCompactList}\small\item\em Parcoure le fichier et créer un histogramme (tableau) assosiant à chaque charactère le nombre d\textquotesingle{}occurences de celui ci dans le fichier source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_ad4869d61241e70c7507c9aec60ec4145}{save\+Histo}} (F\+I\+LE $\ast$fichier)
+\begin{DoxyCompactList}\small\item\em Sauvegarde l\textquotesingle{}histogramme dans un fichier texte. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a973be95dccf82f546397a3055e52c975}{read\+Histo}} (F\+I\+LE $\ast$histof)
+\begin{DoxyCompactList}\small\item\em Lit le fichier et retrouve l\textquotesingle{}histogramme sauvegardée. \end{DoxyCompactList}\item 
+Ptr\+Liste \mbox{\hyperlink{main_8c_abe14f117787dc6fd9cb47da411eddfbd}{convert\+To\+Arbre\+List}} (struct element $\ast$histo, Ptr\+Liste liste)
+\begin{DoxyCompactList}\small\item\em Convertit l\textquotesingle{}histogramme en une liste chainée d\textquotesingle{}arbre Chaque arbre correspond à un élément de l\textquotesingle{}histogramme Les abres sont ajoutés par ordre croissant dans la liste. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_ad9615fb4ab8508f4849b7ffdc7b03de0}{file\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Affiche un message d\textquotesingle{}erreur lors de l\textquotesingle{}ouverture d\textquotesingle{}un fichier. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a5b5d7c677d1739464807fc6459087c1d}{encode}} (char $\ast$inputfile, char $\ast$outfile, char $\ast$histofile)
+\begin{DoxyCompactList}\small\item\em Compresse un fichier texte et sauvegarde son histogramme associé \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a03bf48c9689643d34a1d7c20b94cbdff}{decode}} (char $\ast$compressedfile, char $\ast$outfile, char $\ast$histofile)
+\begin{DoxyCompactList}\small\item\em Decompresse un fichier texte à partir de son histogramme. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a13166be76043b3dfccc0f830c846dc26}{help}} ()
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}aide des options du programme. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_ab2c0a941b82a59b9357c16de5646d821}{bad\+Params}} ()
+\begin{DoxyCompactList}\small\item\em Affiche un message d\textquotesingle{}erreur lors du mauvaise utilisations des paramètres du programme. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Fonction main, elle gère les paramètres. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Ptr\+Liste \mbox{\hyperlink{main_8c_aa74cd26724eac1e5cd5481bd461753ce}{pile}} = N\+U\+LL
+\item 
+Ptr\+Liste \mbox{\hyperlink{main_8c_acfa0ea7c1e0d99557d533876312a39ac}{lst}} = N\+U\+LL
+\item 
+dico\+Elem \mbox{\hyperlink{main_8c_a95b5d49576d6b91034fa8d7eaaaf77e6}{dico}} \mbox{[}256\mbox{]}
+\item 
+P\+Arbre \mbox{\hyperlink{main_8c_acbef372c52fe4ddbdd4bdcc4a256e02c}{TA}}
+\item 
+struct element $\ast$ \mbox{\hyperlink{main_8c_a45d502ce3e93e1bca11e1331cebf2220}{histogramme}}
+\item 
+const int \mbox{\hyperlink{main_8c_ab2b6b0c222cd1ce70d6a831f57241e59}{N}} = 256
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Fichier contenant toutes les fonctions principales et celles liées à l\textquotesingle{}histogramme. 
+
+\begin{DoxyAuthor}{Auteur}
+A B C 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{main_8c_ab2c0a941b82a59b9357c16de5646d821}\label{main_8c_ab2c0a941b82a59b9357c16de5646d821}} 
+\index{main.c@{main.c}!badParams@{badParams}}
+\index{badParams@{badParams}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{badParams()}{badParams()}}
+{\footnotesize\ttfamily int bad\+Params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche un message d\textquotesingle{}erreur lors du mauvaise utilisations des paramètres du programme. 
+
+\begin{DoxyReturn}{Renvoie}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_abe14f117787dc6fd9cb47da411eddfbd}\label{main_8c_abe14f117787dc6fd9cb47da411eddfbd}} 
+\index{main.c@{main.c}!convertToArbreList@{convertToArbreList}}
+\index{convertToArbreList@{convertToArbreList}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{convertToArbreList()}{convertToArbreList()}}
+{\footnotesize\ttfamily Ptr\+Liste convert\+To\+Arbre\+List (\begin{DoxyParamCaption}\item[{struct element $\ast$}]{histo,  }\item[{Ptr\+Liste}]{liste }\end{DoxyParamCaption})}
+
+
+
+Convertit l\textquotesingle{}histogramme en une liste chainée d\textquotesingle{}arbre Chaque arbre correspond à un élément de l\textquotesingle{}histogramme Les abres sont ajoutés par ordre croissant dans la liste. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em histo} & L\textquotesingle{}histogramme \\
+\hline
+{\em liste} & Une liste chainée vide \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Ptr\+Liste Un pointeur sur la liste 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_a45797645f954e737a74401f6b9268466}\label{main_8c_a45797645f954e737a74401f6b9268466}} 
+\index{main.c@{main.c}!creerHisto@{creerHisto}}
+\index{creerHisto@{creerHisto}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{creerHisto()}{creerHisto()}}
+{\footnotesize\ttfamily void creer\+Histo (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Parcoure le fichier et créer un histogramme (tableau) assosiant à chaque charactère le nombre d\textquotesingle{}occurences de celui ci dans le fichier source. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em fp} & Fichier source à parcourir \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8c_a03bf48c9689643d34a1d7c20b94cbdff}\label{main_8c_a03bf48c9689643d34a1d7c20b94cbdff}} 
+\index{main.c@{main.c}!decode@{decode}}
+\index{decode@{decode}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{decode()}{decode()}}
+{\footnotesize\ttfamily int decode (\begin{DoxyParamCaption}\item[{char $\ast$}]{compressedfile,  }\item[{char $\ast$}]{outfile,  }\item[{char $\ast$}]{histofile }\end{DoxyParamCaption})}
+
+
+
+Decompresse un fichier texte à partir de son histogramme. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em inputfile} & Le nom du fichier à decompresser \\
+\hline
+{\em outfile} & Le nom du fichier de sortie (le fichier décodé) \\
+\hline
+{\em histofile} & Le nom du fichier de l\textquotesingle{}histogramme \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_a5b5d7c677d1739464807fc6459087c1d}\label{main_8c_a5b5d7c677d1739464807fc6459087c1d}} 
+\index{main.c@{main.c}!encode@{encode}}
+\index{encode@{encode}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}}
+{\footnotesize\ttfamily int encode (\begin{DoxyParamCaption}\item[{char $\ast$}]{inputfile,  }\item[{char $\ast$}]{outfile,  }\item[{char $\ast$}]{histofile }\end{DoxyParamCaption})}
+
+
+
+Compresse un fichier texte et sauvegarde son histogramme associé 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em inputfile} & Le nom du fichier à compresser \\
+\hline
+{\em outfile} & Le nom du fichier de sortie \\
+\hline
+{\em histofile} & Le nom du fichier ou l\textquotesingle{}histogramme sera sauvegardé \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_ad9615fb4ab8508f4849b7ffdc7b03de0}\label{main_8c_ad9615fb4ab8508f4849b7ffdc7b03de0}} 
+\index{main.c@{main.c}!fileError@{fileError}}
+\index{fileError@{fileError}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{fileError()}{fileError()}}
+{\footnotesize\ttfamily int file\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche un message d\textquotesingle{}erreur lors de l\textquotesingle{}ouverture d\textquotesingle{}un fichier. 
+
+\begin{DoxyReturn}{Renvoie}
+int Le code d\textquotesingle{}erreur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_a13166be76043b3dfccc0f830c846dc26}\label{main_8c_a13166be76043b3dfccc0f830c846dc26}} 
+\index{main.c@{main.c}!help@{help}}
+\index{help@{help}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{help()}{help()}}
+{\footnotesize\ttfamily int help (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche l\textquotesingle{}aide des options du programme. 
+
+\begin{DoxyReturn}{Renvoie}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Fonction main, elle gère les paramètres. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em argc} & \\
+\hline
+{\em argv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_a973be95dccf82f546397a3055e52c975}\label{main_8c_a973be95dccf82f546397a3055e52c975}} 
+\index{main.c@{main.c}!readHisto@{readHisto}}
+\index{readHisto@{readHisto}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{readHisto()}{readHisto()}}
+{\footnotesize\ttfamily void read\+Histo (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{histof }\end{DoxyParamCaption})}
+
+
+
+Lit le fichier et retrouve l\textquotesingle{}histogramme sauvegardée. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em histof} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8c_ad4869d61241e70c7507c9aec60ec4145}\label{main_8c_ad4869d61241e70c7507c9aec60ec4145}} 
+\index{main.c@{main.c}!saveHisto@{saveHisto}}
+\index{saveHisto@{saveHisto}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{saveHisto()}{saveHisto()}}
+{\footnotesize\ttfamily void save\+Histo (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fichier }\end{DoxyParamCaption})}
+
+
+
+Sauvegarde l\textquotesingle{}histogramme dans un fichier texte. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em fichier} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des variables}
+\mbox{\Hypertarget{main_8c_a95b5d49576d6b91034fa8d7eaaaf77e6}\label{main_8c_a95b5d49576d6b91034fa8d7eaaaf77e6}} 
+\index{main.c@{main.c}!dico@{dico}}
+\index{dico@{dico}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{dico}{dico}}
+{\footnotesize\ttfamily dico\+Elem dico\mbox{[}256\mbox{]}}
+
+\mbox{\Hypertarget{main_8c_a45d502ce3e93e1bca11e1331cebf2220}\label{main_8c_a45d502ce3e93e1bca11e1331cebf2220}} 
+\index{main.c@{main.c}!histogramme@{histogramme}}
+\index{histogramme@{histogramme}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{histogramme}{histogramme}}
+{\footnotesize\ttfamily struct element$\ast$ histogramme}
+
+\mbox{\Hypertarget{main_8c_acfa0ea7c1e0d99557d533876312a39ac}\label{main_8c_acfa0ea7c1e0d99557d533876312a39ac}} 
+\index{main.c@{main.c}!lst@{lst}}
+\index{lst@{lst}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{lst}{lst}}
+{\footnotesize\ttfamily Ptr\+Liste lst = N\+U\+LL}
+
+\mbox{\Hypertarget{main_8c_ab2b6b0c222cd1ce70d6a831f57241e59}\label{main_8c_ab2b6b0c222cd1ce70d6a831f57241e59}} 
+\index{main.c@{main.c}!N@{N}}
+\index{N@{N}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily const int N = 256}
+
+\mbox{\Hypertarget{main_8c_aa74cd26724eac1e5cd5481bd461753ce}\label{main_8c_aa74cd26724eac1e5cd5481bd461753ce}} 
+\index{main.c@{main.c}!pile@{pile}}
+\index{pile@{pile}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{pile}{pile}}
+{\footnotesize\ttfamily Ptr\+Liste pile = N\+U\+LL}
+
+\mbox{\Hypertarget{main_8c_acbef372c52fe4ddbdd4bdcc4a256e02c}\label{main_8c_acbef372c52fe4ddbdd4bdcc4a256e02c}} 
+\index{main.c@{main.c}!TA@{TA}}
+\index{TA@{TA}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{TA}{TA}}
+{\footnotesize\ttfamily P\+Arbre TA}
+

@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet Huffman: Référence du fichier arbre.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projet Huffman
+   </div>
+   <div id="projectbrief">Compression de fichier texte en utilisant l&#39;algo Huffman</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier arbre.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Contient les fonctions de gestion lds arbre binaires.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &quot;main.h&quot;</code><br />
+<code>#include &quot;arbre.h&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a8b0d099b80f0aa5bd8194f892227ad75"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arbre_8c.html#a8b0d099b80f0aa5bd8194f892227ad75">MALLOC</a>(x)&#160;&#160;&#160;((x* ) malloc(sizeof(x)))</td></tr>
+<tr class="separator:a8b0d099b80f0aa5bd8194f892227ad75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a7ed62c200631f89af48656bce08ac09e"><td class="memItemLeft" align="right" valign="top">PtrListe&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arbre_8c.html#a7ed62c200631f89af48656bce08ac09e">creerNoeud</a> (PArbre x, PtrListe suiv)</td></tr>
+<tr class="separator:a7ed62c200631f89af48656bce08ac09e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f61a37bb9c3870cc2f51f6310861a3a"><td class="memItemLeft" align="right" valign="top">PtrListe&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arbre_8c.html#a2f61a37bb9c3870cc2f51f6310861a3a">insertList</a> (PtrListe tete, PArbre val)</td></tr>
+<tr class="memdesc:a2f61a37bb9c3870cc2f51f6310861a3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert un élément de manière croissante dans un liste.  <a href="arbre_8c.html#a2f61a37bb9c3870cc2f51f6310861a3a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2f61a37bb9c3870cc2f51f6310861a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a182f016c207afd89026bffd93e6e6348"><td class="memItemLeft" align="right" valign="top">PArbre&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arbre_8c.html#a182f016c207afd89026bffd93e6e6348">creerArbreBin</a> (int e, char c)</td></tr>
+<tr class="memdesc:a182f016c207afd89026bffd93e6e6348"><td class="mdescLeft">&#160;</td><td class="mdescRight">Créer un arbre binaire contenant aucun fils.  <a href="arbre_8c.html#a182f016c207afd89026bffd93e6e6348">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a182f016c207afd89026bffd93e6e6348"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6273fa0f5f29c96beb964afe918e3b6"><td class="memItemLeft" align="right" valign="top">PtrListe&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arbre_8c.html#ac6273fa0f5f29c96beb964afe918e3b6">depile</a> (PtrListe <a class="el" href="main_8c.html#aa74cd26724eac1e5cd5481bd461753ce">pile</a>, PArbre A)</td></tr>
+<tr class="memdesc:ac6273fa0f5f29c96beb964afe918e3b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retire le premier élément de la liste et retourne la nouvelle liste Renvoie le premier élément de la liste à travers le paramètre A.  <a href="arbre_8c.html#ac6273fa0f5f29c96beb964afe918e3b6">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac6273fa0f5f29c96beb964afe918e3b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b3d317b66d280048f9bb313fd0d120b"><td class="memItemLeft" align="right" valign="top">PArbre&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arbre_8c.html#a3b3d317b66d280048f9bb313fd0d120b">creerArbreHuffman</a> (PtrListe liste)</td></tr>
+<tr class="memdesc:a3b3d317b66d280048f9bb313fd0d120b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Créer l'abre binaire de Huffman à partir d'une liste d'arbre binaire.  <a href="arbre_8c.html#a3b3d317b66d280048f9bb313fd0d120b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3b3d317b66d280048f9bb313fd0d120b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9e1cacd30ceb5199963ebf2e393e2d3"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arbre_8c.html#af9e1cacd30ceb5199963ebf2e393e2d3">copyArray</a> (char bitArray[256], char newArr[256])</td></tr>
+<tr class="memdesc:af9e1cacd30ceb5199963ebf2e393e2d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copie un tableau de 256 caractères dans un autre tableau.  <a href="arbre_8c.html#af9e1cacd30ceb5199963ebf2e393e2d3">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af9e1cacd30ceb5199963ebf2e393e2d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32195b98d36430b41bdff54408861c30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arbre_8c.html#a32195b98d36430b41bdff54408861c30">createDico</a> (dicoElem <a class="el" href="main_8c.html#a95b5d49576d6b91034fa8d7eaaaf77e6">dico</a>[256], PArbre A, char bitArray[256], int h)</td></tr>
+<tr class="memdesc:a32195b98d36430b41bdff54408861c30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Créer un tableau associant à chaque caractère son codage huffman associé  <a href="arbre_8c.html#a32195b98d36430b41bdff54408861c30">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a32195b98d36430b41bdff54408861c30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Contient les fonctions de gestion lds arbre binaires. </p>
+</div><h2 class="groupheader">Documentation des macros</h2>
+<a id="a8b0d099b80f0aa5bd8194f892227ad75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b0d099b80f0aa5bd8194f892227ad75">&#9670;&nbsp;</a></span>MALLOC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MALLOC</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;((x* ) malloc(sizeof(x)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="af9e1cacd30ceb5199963ebf2e393e2d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9e1cacd30ceb5199963ebf2e393e2d3">&#9670;&nbsp;</a></span>copyArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* copyArray </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>bitArray</em>[256], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>newArr</em>[256]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copie un tableau de 256 caractères dans un autre tableau. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitArray</td><td>Tableau d'entrée de 256 char </td></tr>
+    <tr><td class="paramname">newArr</td><td>Nouveau tableau contenant 256 char </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>char* Nouveau tableau contenant 256 char </dd></dl>
+
+</div>
+</div>
+<a id="a32195b98d36430b41bdff54408861c30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32195b98d36430b41bdff54408861c30">&#9670;&nbsp;</a></span>createDico()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void createDico </td>
+          <td>(</td>
+          <td class="paramtype">dicoElem&#160;</td>
+          <td class="paramname"><em>dico</em>[256], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PArbre&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>bitArray</em>[256], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Créer un tableau associant à chaque caractère son codage huffman associé </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">A faire:</a></b></dt><dd>CHANGER LE NOM DE LA FCT </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dico</td><td>Le tableau </td></tr>
+    <tr><td class="paramname">A</td><td>L'arbre de huffman </td></tr>
+    <tr><td class="paramname">bitArray</td><td></td></tr>
+    <tr><td class="paramname">h</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a182f016c207afd89026bffd93e6e6348"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a182f016c207afd89026bffd93e6e6348">&#9670;&nbsp;</a></span>creerArbreBin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PArbre creerArbreBin </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Créer un arbre binaire contenant aucun fils. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>Le nombre d'occurences du caractère </td></tr>
+    <tr><td class="paramname">c</td><td>Le caractère à inserer dans l'abre binaire </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>PArbre </dd></dl>
+
+</div>
+</div>
+<a id="a3b3d317b66d280048f9bb313fd0d120b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b3d317b66d280048f9bb313fd0d120b">&#9670;&nbsp;</a></span>creerArbreHuffman()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PArbre creerArbreHuffman </td>
+          <td>(</td>
+          <td class="paramtype">PtrListe&#160;</td>
+          <td class="paramname"><em>liste</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Créer l'abre binaire de Huffman à partir d'une liste d'arbre binaire. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">liste</td><td>Pointeur vers une liste chainée trié par ordre croissant </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>PArbre Pointeur vers l'abre de Huffman </dd></dl>
+
+</div>
+</div>
+<a id="a7ed62c200631f89af48656bce08ac09e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ed62c200631f89af48656bce08ac09e">&#9670;&nbsp;</a></span>creerNoeud()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PtrListe creerNoeud </td>
+          <td>(</td>
+          <td class="paramtype">PArbre&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PtrListe&#160;</td>
+          <td class="paramname"><em>suiv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6273fa0f5f29c96beb964afe918e3b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6273fa0f5f29c96beb964afe918e3b6">&#9670;&nbsp;</a></span>depile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PtrListe depile </td>
+          <td>(</td>
+          <td class="paramtype">PtrListe&#160;</td>
+          <td class="paramname"><em>pile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PArbre&#160;</td>
+          <td class="paramname"><em>A</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retire le premier élément de la liste et retourne la nouvelle liste Renvoie le premier élément de la liste à travers le paramètre A. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pile</td><td>Pointeur vers la liste chainée </td></tr>
+    <tr><td class="paramname">A</td><td>POINTEUR vers un arbre binaire </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>PtrListe </dd></dl>
+
+</div>
+</div>
+<a id="a2f61a37bb9c3870cc2f51f6310861a3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f61a37bb9c3870cc2f51f6310861a3a">&#9670;&nbsp;</a></span>insertList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PtrListe insertList </td>
+          <td>(</td>
+          <td class="paramtype">PtrListe&#160;</td>
+          <td class="paramname"><em>tete</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PArbre&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Insert un élément de manière croissante dans un liste. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tete</td><td>Pointeur vers une liste chainée </td></tr>
+    <tr><td class="paramname">val</td><td>Pointeur vers l'abre à inserer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>PtrListe Pointeur vers la nouvelle liste </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

@@ -1,0 +1,105 @@
+\hypertarget{bin_8c}{}\doxysection{Référence du fichier bin.\+c}
+\label{bin_8c}\index{bin.c@{bin.c}}
+
+
+Contient les fonctions permettant la gestion des caractères en binaire.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}arbre.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}bin.\+h\char`\"{}}\newline
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{bin_8c_afee0e0e437f8417b44f2e6de6dfc95cb}{to\+Binary}} (char c, char bin\+Arr\mbox{[}8\mbox{]})
+\begin{DoxyCompactList}\small\item\em Convertit un caractère en son écriture en binaire Retourne un tableau de huit caractères correspondant à son écriture en binaire Chaque caractère du tableau est soit \textquotesingle{}0\textquotesingle{} soit \textquotesingle{}1\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bin_8c_af1bf517e7276d30644219b3220a3bed9}{create\+Bin\+File}} (F\+I\+LE $\ast$encoded, F\+I\+LE $\ast$binfile)
+\begin{DoxyCompactList}\small\item\em Créer un fichier -\/$>$temporaire$<$-\/ convertissant chaque caractères du fichier compressé par huffman en un fichier texte contenant l\textquotesingle{}écriture en binaire de chaque caractères. Cette fonction sert à simplifier la decompression du fichier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bin_8c_a64b703e5f0bb7e8dd2127c73a8a849ab}{decode\+From\+Bin\+File}} (P\+Arbre A, F\+I\+LE $\ast$fd)
+\begin{DoxyCompactList}\small\item\em Parcoure le fichier binaire precedement créé et decode ce fichier à partir de l\textquotesingle{}abre de Huffman. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bin_8c_a63a06feb28d230bde768e2d56068db04}{encode\+Write}} (dico\+Elem \mbox{\hyperlink{main_8c_a95b5d49576d6b91034fa8d7eaaaf77e6}{dico}}\mbox{[}256\mbox{]}, F\+I\+LE $\ast$fichier, F\+I\+LE $\ast$fo)
+\begin{DoxyCompactList}\small\item\em ceci est la fonction qui permet d\textquotesingle{}encoder le fichier \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Contient les fonctions permettant la gestion des caractères en binaire. 
+
+\begin{DoxyRefDesc}{A faire}
+\item[\mbox{\hyperlink{todo__todo000002}{A faire}}]Regler le bug sur le dernier byte \end{DoxyRefDesc}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{bin_8c_af1bf517e7276d30644219b3220a3bed9}\label{bin_8c_af1bf517e7276d30644219b3220a3bed9}} 
+\index{bin.c@{bin.c}!createBinFile@{createBinFile}}
+\index{createBinFile@{createBinFile}!bin.c@{bin.c}}
+\doxysubsubsection{\texorpdfstring{createBinFile()}{createBinFile()}}
+{\footnotesize\ttfamily void create\+Bin\+File (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{encoded,  }\item[{F\+I\+LE $\ast$}]{binfile }\end{DoxyParamCaption})}
+
+
+
+Créer un fichier -\/$>$temporaire$<$-\/ convertissant chaque caractères du fichier compressé par huffman en un fichier texte contenant l\textquotesingle{}écriture en binaire de chaque caractères. Cette fonction sert à simplifier la decompression du fichier. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em encoded} & Le fichier compressé \\
+\hline
+{\em binfile} & Le fichier texte l\textquotesingle{}écriture en binaire \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{bin_8c_a64b703e5f0bb7e8dd2127c73a8a849ab}\label{bin_8c_a64b703e5f0bb7e8dd2127c73a8a849ab}} 
+\index{bin.c@{bin.c}!decodeFromBinFile@{decodeFromBinFile}}
+\index{decodeFromBinFile@{decodeFromBinFile}!bin.c@{bin.c}}
+\doxysubsubsection{\texorpdfstring{decodeFromBinFile()}{decodeFromBinFile()}}
+{\footnotesize\ttfamily void decode\+From\+Bin\+File (\begin{DoxyParamCaption}\item[{P\+Arbre}]{A,  }\item[{F\+I\+LE $\ast$}]{fd }\end{DoxyParamCaption})}
+
+
+
+Parcoure le fichier binaire precedement créé et decode ce fichier à partir de l\textquotesingle{}abre de Huffman. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em A} & Arbre de codage huffman \\
+\hline
+{\em fd} & Le fichier de sortie qui contiendra le texte decompressé \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{bin_8c_a63a06feb28d230bde768e2d56068db04}\label{bin_8c_a63a06feb28d230bde768e2d56068db04}} 
+\index{bin.c@{bin.c}!encodeWrite@{encodeWrite}}
+\index{encodeWrite@{encodeWrite}!bin.c@{bin.c}}
+\doxysubsubsection{\texorpdfstring{encodeWrite()}{encodeWrite()}}
+{\footnotesize\ttfamily void encode\+Write (\begin{DoxyParamCaption}\item[{dico\+Elem}]{dico\mbox{[}256\mbox{]},  }\item[{F\+I\+LE $\ast$}]{fichier,  }\item[{F\+I\+LE $\ast$}]{fo }\end{DoxyParamCaption})}
+
+
+
+ceci est la fonction qui permet d\textquotesingle{}encoder le fichier 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em dico} & dictionnaire contenant le codage de chaque lettres \\
+\hline
+{\em fichier} & fichier d\textquotesingle{}entrée \\
+\hline
+{\em fo} & fichier de sortie \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{bin_8c_afee0e0e437f8417b44f2e6de6dfc95cb}\label{bin_8c_afee0e0e437f8417b44f2e6de6dfc95cb}} 
+\index{bin.c@{bin.c}!toBinary@{toBinary}}
+\index{toBinary@{toBinary}!bin.c@{bin.c}}
+\doxysubsubsection{\texorpdfstring{toBinary()}{toBinary()}}
+{\footnotesize\ttfamily void to\+Binary (\begin{DoxyParamCaption}\item[{char}]{c,  }\item[{char}]{bin\+Arr\mbox{[}8\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Convertit un caractère en son écriture en binaire Retourne un tableau de huit caractères correspondant à son écriture en binaire Chaque caractère du tableau est soit \textquotesingle{}0\textquotesingle{} soit \textquotesingle{}1\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em c} & \\
+\hline
+{\em bin\+Arr} & \\
+\hline
+\end{DoxyParams}

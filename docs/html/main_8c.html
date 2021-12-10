@@ -1,0 +1,530 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet Huffman: Référence du fichier main.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projet Huffman
+   </div>
+   <div id="projectbrief">Compression de fichier texte en utilisant l&#39;algo Huffman</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier main.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Fichier contenant toutes les fonctions principales et celles liées à l'histogramme.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &quot;main.h&quot;</code><br />
+<code>#include &quot;bin.h&quot;</code><br />
+<code>#include &quot;arbre.h&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a45797645f954e737a74401f6b9268466"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a45797645f954e737a74401f6b9268466">creerHisto</a> (FILE *fp)</td></tr>
+<tr class="memdesc:a45797645f954e737a74401f6b9268466"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parcoure le fichier et créer un histogramme (tableau) assosiant à chaque charactère le nombre d'occurences de celui ci dans le fichier source.  <a href="main_8c.html#a45797645f954e737a74401f6b9268466">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a45797645f954e737a74401f6b9268466"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4869d61241e70c7507c9aec60ec4145"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ad4869d61241e70c7507c9aec60ec4145">saveHisto</a> (FILE *fichier)</td></tr>
+<tr class="memdesc:ad4869d61241e70c7507c9aec60ec4145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sauvegarde l'histogramme dans un fichier texte.  <a href="main_8c.html#ad4869d61241e70c7507c9aec60ec4145">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad4869d61241e70c7507c9aec60ec4145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a973be95dccf82f546397a3055e52c975"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a973be95dccf82f546397a3055e52c975">readHisto</a> (FILE *histof)</td></tr>
+<tr class="memdesc:a973be95dccf82f546397a3055e52c975"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lit le fichier et retrouve l'histogramme sauvegardée.  <a href="main_8c.html#a973be95dccf82f546397a3055e52c975">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a973be95dccf82f546397a3055e52c975"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe14f117787dc6fd9cb47da411eddfbd"><td class="memItemLeft" align="right" valign="top">PtrListe&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#abe14f117787dc6fd9cb47da411eddfbd">convertToArbreList</a> (struct element *histo, PtrListe liste)</td></tr>
+<tr class="memdesc:abe14f117787dc6fd9cb47da411eddfbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convertit l'histogramme en une liste chainée d'arbre Chaque arbre correspond à un élément de l'histogramme Les abres sont ajoutés par ordre croissant dans la liste.  <a href="main_8c.html#abe14f117787dc6fd9cb47da411eddfbd">Plus de détails...</a><br /></td></tr>
+<tr class="separator:abe14f117787dc6fd9cb47da411eddfbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9615fb4ab8508f4849b7ffdc7b03de0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ad9615fb4ab8508f4849b7ffdc7b03de0">fileError</a> ()</td></tr>
+<tr class="memdesc:ad9615fb4ab8508f4849b7ffdc7b03de0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche un message d'erreur lors de l'ouverture d'un fichier.  <a href="main_8c.html#ad9615fb4ab8508f4849b7ffdc7b03de0">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad9615fb4ab8508f4849b7ffdc7b03de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b5d7c677d1739464807fc6459087c1d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a5b5d7c677d1739464807fc6459087c1d">encode</a> (char *inputfile, char *outfile, char *histofile)</td></tr>
+<tr class="memdesc:a5b5d7c677d1739464807fc6459087c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compresse un fichier texte et sauvegarde son histogramme associé  <a href="main_8c.html#a5b5d7c677d1739464807fc6459087c1d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a5b5d7c677d1739464807fc6459087c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03bf48c9689643d34a1d7c20b94cbdff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a03bf48c9689643d34a1d7c20b94cbdff">decode</a> (char *compressedfile, char *outfile, char *histofile)</td></tr>
+<tr class="memdesc:a03bf48c9689643d34a1d7c20b94cbdff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decompresse un fichier texte à partir de son histogramme.  <a href="main_8c.html#a03bf48c9689643d34a1d7c20b94cbdff">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a03bf48c9689643d34a1d7c20b94cbdff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13166be76043b3dfccc0f830c846dc26"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a13166be76043b3dfccc0f830c846dc26">help</a> ()</td></tr>
+<tr class="memdesc:a13166be76043b3dfccc0f830c846dc26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche l'aide des options du programme.  <a href="main_8c.html#a13166be76043b3dfccc0f830c846dc26">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a13166be76043b3dfccc0f830c846dc26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2c0a941b82a59b9357c16de5646d821"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ab2c0a941b82a59b9357c16de5646d821">badParams</a> ()</td></tr>
+<tr class="memdesc:ab2c0a941b82a59b9357c16de5646d821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche un message d'erreur lors du mauvaise utilisations des paramètres du programme.  <a href="main_8c.html#ab2c0a941b82a59b9357c16de5646d821">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab2c0a941b82a59b9357c16de5646d821"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction main, elle gère les paramètres.  <a href="main_8c.html#a0ddf1224851353fc92bfbff6f499fa97">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aa74cd26724eac1e5cd5481bd461753ce"><td class="memItemLeft" align="right" valign="top">PtrListe&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aa74cd26724eac1e5cd5481bd461753ce">pile</a> = NULL</td></tr>
+<tr class="separator:aa74cd26724eac1e5cd5481bd461753ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfa0ea7c1e0d99557d533876312a39ac"><td class="memItemLeft" align="right" valign="top">PtrListe&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#acfa0ea7c1e0d99557d533876312a39ac">lst</a> = NULL</td></tr>
+<tr class="separator:acfa0ea7c1e0d99557d533876312a39ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95b5d49576d6b91034fa8d7eaaaf77e6"><td class="memItemLeft" align="right" valign="top">dicoElem&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a95b5d49576d6b91034fa8d7eaaaf77e6">dico</a> [256]</td></tr>
+<tr class="separator:a95b5d49576d6b91034fa8d7eaaaf77e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbef372c52fe4ddbdd4bdcc4a256e02c"><td class="memItemLeft" align="right" valign="top">PArbre&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#acbef372c52fe4ddbdd4bdcc4a256e02c">TA</a></td></tr>
+<tr class="separator:acbef372c52fe4ddbdd4bdcc4a256e02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45d502ce3e93e1bca11e1331cebf2220"><td class="memItemLeft" align="right" valign="top">struct element *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a45d502ce3e93e1bca11e1331cebf2220">histogramme</a></td></tr>
+<tr class="separator:a45d502ce3e93e1bca11e1331cebf2220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2b6b0c222cd1ce70d6a831f57241e59"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ab2b6b0c222cd1ce70d6a831f57241e59">N</a> = 256</td></tr>
+<tr class="separator:ab2b6b0c222cd1ce70d6a831f57241e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Fichier contenant toutes les fonctions principales et celles liées à l'histogramme. </p>
+<dl class="section author"><dt>Auteur</dt><dd>A B C </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="ab2c0a941b82a59b9357c16de5646d821"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2c0a941b82a59b9357c16de5646d821">&#9670;&nbsp;</a></span>badParams()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int badParams </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche un message d'erreur lors du mauvaise utilisations des paramètres du programme. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="abe14f117787dc6fd9cb47da411eddfbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe14f117787dc6fd9cb47da411eddfbd">&#9670;&nbsp;</a></span>convertToArbreList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PtrListe convertToArbreList </td>
+          <td>(</td>
+          <td class="paramtype">struct element *&#160;</td>
+          <td class="paramname"><em>histo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PtrListe&#160;</td>
+          <td class="paramname"><em>liste</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convertit l'histogramme en une liste chainée d'arbre Chaque arbre correspond à un élément de l'histogramme Les abres sont ajoutés par ordre croissant dans la liste. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">histo</td><td>L'histogramme </td></tr>
+    <tr><td class="paramname">liste</td><td>Une liste chainée vide </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>PtrListe Un pointeur sur la liste </dd></dl>
+
+</div>
+</div>
+<a id="a45797645f954e737a74401f6b9268466"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45797645f954e737a74401f6b9268466">&#9670;&nbsp;</a></span>creerHisto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void creerHisto </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parcoure le fichier et créer un histogramme (tableau) assosiant à chaque charactère le nombre d'occurences de celui ci dans le fichier source. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fp</td><td>Fichier source à parcourir </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a03bf48c9689643d34a1d7c20b94cbdff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03bf48c9689643d34a1d7c20b94cbdff">&#9670;&nbsp;</a></span>decode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int decode </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>compressedfile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>outfile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>histofile</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Decompresse un fichier texte à partir de son histogramme. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inputfile</td><td>Le nom du fichier à decompresser </td></tr>
+    <tr><td class="paramname">outfile</td><td>Le nom du fichier de sortie (le fichier décodé) </td></tr>
+    <tr><td class="paramname">histofile</td><td>Le nom du fichier de l'histogramme </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="a5b5d7c677d1739464807fc6459087c1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b5d7c677d1739464807fc6459087c1d">&#9670;&nbsp;</a></span>encode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int encode </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>inputfile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>outfile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>histofile</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compresse un fichier texte et sauvegarde son histogramme associé </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inputfile</td><td>Le nom du fichier à compresser </td></tr>
+    <tr><td class="paramname">outfile</td><td>Le nom du fichier de sortie </td></tr>
+    <tr><td class="paramname">histofile</td><td>Le nom du fichier ou l'histogramme sera sauvegardé </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="ad9615fb4ab8508f4849b7ffdc7b03de0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9615fb4ab8508f4849b7ffdc7b03de0">&#9670;&nbsp;</a></span>fileError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fileError </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche un message d'erreur lors de l'ouverture d'un fichier. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>int Le code d'erreur </dd></dl>
+
+</div>
+</div>
+<a id="a13166be76043b3dfccc0f830c846dc26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13166be76043b3dfccc0f830c846dc26">&#9670;&nbsp;</a></span>help()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int help </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche l'aide des options du programme. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction main, elle gère les paramètres. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td></td></tr>
+    <tr><td class="paramname">argv</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="a973be95dccf82f546397a3055e52c975"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a973be95dccf82f546397a3055e52c975">&#9670;&nbsp;</a></span>readHisto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void readHisto </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>histof</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lit le fichier et retrouve l'histogramme sauvegardée. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">histof</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad4869d61241e70c7507c9aec60ec4145"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4869d61241e70c7507c9aec60ec4145">&#9670;&nbsp;</a></span>saveHisto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void saveHisto </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fichier</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sauvegarde l'histogramme dans un fichier texte. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fichier</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a id="a95b5d49576d6b91034fa8d7eaaaf77e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95b5d49576d6b91034fa8d7eaaaf77e6">&#9670;&nbsp;</a></span>dico</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dicoElem dico[256]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a45d502ce3e93e1bca11e1331cebf2220"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45d502ce3e93e1bca11e1331cebf2220">&#9670;&nbsp;</a></span>histogramme</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct element* histogramme</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acfa0ea7c1e0d99557d533876312a39ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfa0ea7c1e0d99557d533876312a39ac">&#9670;&nbsp;</a></span>lst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PtrListe lst = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2b6b0c222cd1ce70d6a831f57241e59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2b6b0c222cd1ce70d6a831f57241e59">&#9670;&nbsp;</a></span>N</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int N = 256</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa74cd26724eac1e5cd5481bd461753ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa74cd26724eac1e5cd5481bd461753ce">&#9670;&nbsp;</a></span>pile</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PtrListe pile = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acbef372c52fe4ddbdd4bdcc4a256e02c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbef372c52fe4ddbdd4bdcc4a256e02c">&#9670;&nbsp;</a></span>TA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PArbre TA</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>
