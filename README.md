@@ -1,10 +1,15 @@
 # Projet compression Huffman en C
 
+Implemente l'algorithme de Huffman pour compresser et decompresser des fichiers de tout types sans pertes
+
 ## Compilation
 
 `gcc arbre.c bin.c main.c -o huffman`
 
 ## Execution
 
-Compression de lorem.txt -> `./huffman -c lorem.txt lorem.hfzip lorem.histo` \n
-Decompression de lorem.hfzip -> `./huffman -d lorem.hfzip lorem2.txt lorem.histo`
+Compression de hp.txt -> `./huffman -c hp.txt hp.hfzip hp.histo` \n
+Decompression de hp.hfzip -> `./huffman -d hp.hfzip hp2.txt hp.histo`\n
+
+Compression de img.jpg -> `./huffman -c img.jpg img.hfzip img.histo` \n
+Decompression de img.jpg -> `./huffman -d img.hfzip img2.jpg img.histo`\n

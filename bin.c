@@ -1,10 +1,8 @@
 /**
  * @file bin.c
  * @brief Contient les fonctions permettant la gestion des caractères en binaire
- * @todo Regler le bug sur le dernier byte 
  */
 
-//rgn@cy-tech.fr
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

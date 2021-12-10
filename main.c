@@ -1,8 +1,6 @@
 /**
  * @file main.c
- * @author A B C
  * @brief Fichier contenant toutes les fonctions principales et celles liées à l'histogramme 
- * 
  */
 
 #include <stdio.h>
@@ -165,6 +163,7 @@ int encode(char *inputfile, char *outfile, char *histofile) {
  * @return int 
  */
 int decode(char *compressedfile, char *outfile, char *histofile) {
+    printf("Compression de %s\n", compressedfile);
     // On lit l'histogramme depuis le fichier 
     FILE* histof = fopen(histofile, "r");
     if(histof == NULL) return fileError();
@@ -196,7 +195,7 @@ int decode(char *compressedfile, char *outfile, char *histofile) {
     fclose(outf);
 
     // On supprime le fichier temporaire
-    //remove("bin.txt");
+    remove("bin.txt");
     return 1;
 }
 
