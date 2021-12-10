@@ -82,7 +82,6 @@ void decodeFromBinFile(PArbre A, FILE* fd) {
         }
     }
 
-    fclose(fd);
     fclose(fichier);
 }
 
